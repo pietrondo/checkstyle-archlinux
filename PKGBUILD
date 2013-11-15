@@ -2,7 +2,7 @@
 
 pkgname='checkstyle'
 pkgver='5.6'
-pkgrel=1
+pkgrel=2
 pkgdesc='Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard'
 depends=('jdk7-openjdk')
 arch=('i686' 'x86_64')
@@ -13,7 +13,7 @@ source=(
     'checkstyle')
 md5sums=(
     '5e169758daee9868b11c96c33626bb9d'
-    'f8d48576645cd8d110cbfc893e3b71d8')
+    'ea2a87471e532828f496618233be03ba')
 
 function package() {
     local destdir="${pkgdir}/opt/${pkgname}"
