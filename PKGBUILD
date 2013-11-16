@@ -2,11 +2,11 @@
 
 pkgname='checkstyle'
 pkgver='5.6'
-pkgrel=2
+pkgrel=3
 pkgdesc='Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard'
 depends=('jdk7-openjdk')
 arch=('i686' 'x86_64')
-license=('LGPLv2.1')
+license=('LGPL2')
 url='http://checkstyle.sourceforge.net'
 source=(
     "http://downloads.sourceforge.net/project/checkstyle/checkstyle/${pkgver}/${pkgname}-${pkgver}-bin.zip"
@@ -19,16 +19,10 @@ function package() {
     local destdir="${pkgdir}/opt/${pkgname}"
     local bindir="${pkgdir}/usr/bin"
 
-    if [[ -d ${destdir} ]]
-    then
-        rm -rf ${destdir}
-    fi
-
     mkdir -pv ${destdir}
     mkdir -pv ${bindir}
 
     cp -r "${srcdir}/${pkgname}-${pkgver}"/* ${destdir}
 
-    cp "${srcdir}/${pkgname}" ${bindir}
-    chmod 755 "${bindir}/${pkgname}"
+    install -m755 "${srcdir}/${pkgname}" ${bindir}
 }
