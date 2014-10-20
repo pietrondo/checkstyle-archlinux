@@ -1,5 +1,9 @@
 # checkstyle archlinux package
 
+## 5.9-1
+
+* Checkstyle v5.9
+
 ## 5.7-2
 
 * Depend on java-environment
