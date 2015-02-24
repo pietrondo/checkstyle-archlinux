@@ -1,3 +1,4 @@
 #!/bin/bash
 
-java -jar /opt/checkstyle/checkstyle-5.9-all.jar $@
+java -jar /opt/checkstyle/checkstyle-6.36.36.36.36.3-all.jar $@
+

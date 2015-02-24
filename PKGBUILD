@@ -1,7 +1,7 @@
 # Maintainer: Jaime Gil de Sagredo <jaimegildesagredo@gmail.com
 
 pkgname='checkstyle'
-pkgver='5.9'
+pkgver='6.3'
 pkgrel=1
 pkgdesc='Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard'
 depends=('java-environment')
@@ -11,9 +11,11 @@ url='http://checkstyle.sourceforge.net'
 source=(
     "http://downloads.sourceforge.net/project/checkstyle/checkstyle/${pkgver}/${pkgname}-${pkgver}-bin.tar.gz"
     'checkstyle')
-md5sums=(
-    '032e8653dcee6d5370d7f84c87ac2548'
-    '8326c63991962d738fa9c55d0dd8d64d')
+
+
+    md5sums=('0e1a704cc956be3b56732a214d819a4d'
+             '8326c63991962d738fa9c55d0dd8d64d')
+
 
 function package() {
     local destdir="${pkgdir}/opt/${pkgname}"
